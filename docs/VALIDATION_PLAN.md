@@ -18,10 +18,10 @@ Este documento describe el protocolo de validación del sistema eDMS conforme a 
 ### 3.1 Objetivo
 Verificar instalación correcta de hardware, software y servicios.
 ### 3.2 Requisitos Previos
-- Servidor con OS [especificar versión].
-- Base de datos PostgreSQL [versión].
-- MinIO o AWS S3 configurado.
-- Dominio y certificados TLS.
+- Servidor con OS **Ubuntu 22.04 LTS** (Linux estable y muy usado en producción).  
+- Base de datos **PostgreSQL 14**.  
+- **MinIO** (local) o **AWS S3** (región us-east-1) configurado.  
+- Dominio: **docs.tuempresa.com** con certificados **Let’s Encrypt** (TLS 1.2+).
 ### 3.3 Procedimiento IQ
 1. Verificar versión de OS:
    - Comando: `uname -a`
@@ -57,11 +57,12 @@ Verificar rendimiento y estabilidad bajo carga.
 | PQ-4 | Failover                    | Simular caída de nodo backend                  | Sistema sin interrupción    |                 | logs HA          |
 
 ## 6. Cronograma de Validación
-| Fase | Duración Estimada | Fecha Inicio | Fecha Fin |
-|------|-------------------|--------------|-----------|
-| IQ   | 2 semanas         | [dd/mm/aaaa] | [dd/mm/aaaa] |
-| OQ   | 4 semanas         | [dd/mm/aaaa] | [dd/mm/aaaa] |
-| PQ   | 4 semanas         | [dd/mm/aaaa] | [dd/mm/aaaa] |
+## 6. Cronograma de Validación
+| Fase | Duración Estimada | Fecha Inicio   | Fecha Fin      |
+|------|-------------------|----------------|----------------|
+| IQ   | 2 semanas         | 01/09/2025     | 14/09/2025     |
+| OQ   | 4 semanas         | 15/09/2025     | 12/10/2025     |
+| PQ   | 4 semanas         | 13/10/2025     | 09/11/2025     |
 
 ## 7. Aprobación
 | Fase | Firma Responsable            | Fecha       |
