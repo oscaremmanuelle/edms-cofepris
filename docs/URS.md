@@ -17,3 +17,31 @@ El sistema cubrirá los siguientes ámbitos y documentos:
   - Responsable Sanitario, Gestión de Calidad, Producción, TI, Auditores COFEPRIS.
 - **Interfaces**:  
   - Web (navegador), posibles integraciones con DIGIPRiS/ERP.
+
+## 3. Requisitos Funcionales Críticos”
+
+	1.	Control de Versiones
+	•	Creación de nueva versión de un documento.
+	•	Aprobación de versión (solo usuarios con rol “Aprobador”).
+	•	Obsolescencia y retiro de versiones antiguas.
+	2.	Workflows de Aprobación
+	•	Definir rutas (e.g. Autor → QA → Responsable Sanitario).
+	•	Notificaciones automáticas por correo o en UI.
+	•	Visualización del estado (Borrador, En Revisión, Aprobado, Obsoleto).
+	3.	Firma Electrónica
+	•	Integración con certificado X.509 o proveedor (DocuSign/Adobe).
+	•	Registro de firma con sello de tiempo.
+	•	Equivalencia legal según FDA 21 CFR Part 11.
+	4.	Gestión de Metadatos
+	•	Campos obligatorios: ID único, título, familia normativa, producto asociado, versión, autor, fecha.
+	•	Campos opcionales: palabras clave, idioma, retención (fecha de expiración).
+	5.	Búsqueda y Recuperación
+	•	Búsqueda por metadatos.
+	•	Búsqueda full-text sobre OCR.
+	•	Filtrado por estado, fecha, família normativa.
+	6.	Exportación de Paquetes Regulatorios
+	•	Generar ZIP/PDF/A con estructura RIS Art. 179/180.
+	•	Incluir checklists automáticos de cumplimiento (p.ej. control de cambios).
+	7.	Control de Retención y Disposición
+	•	Alarmas para documentos próximos a expirar.
+	•	Flujo para marcar “Descartar papel” o “Conservar hasta…”.
