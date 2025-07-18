@@ -80,3 +80,4 @@ El sistema cubrirá los siguientes ámbitos y documentos:
 8. **Backup y Recuperación**  
    - Backups diarios de base de datos y bucket de archivos, retención de 30 días.  
    - Procedimiento documentado de restore en < 2 horas.
+
