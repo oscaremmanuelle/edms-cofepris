@@ -45,3 +45,38 @@ El sistema cubrirá los siguientes ámbitos y documentos:
 	7.	Control de Retención y Disposición
 	•	Alarmas para documentos próximos a expirar.
 	•	Flujo para marcar “Descartar papel” o “Conservar hasta…”.
+
+## 4. Requisitos No Funcionales
+
+1. **Seguridad**  
+   - Autenticación y autorización basada en roles (RBAC).  
+   - Cifrado de datos **at-rest** (AES-256) y **in-transit** (TLS 1.2+).  
+   - Gestión de contraseñas seguras (longitud mínima 12, expiración configurable).
+
+2. **Rendimiento**  
+   - Soportar la ingestión simultánea de **100 documentos/hora** sin degradar respuesta.  
+   - Tiempos de respuesta de búsqueda < 2 s para queries por metadatos.
+
+3. **Disponibilidad y Resiliencia**  
+   - SLA ≥ 99.5 % uptime.  
+   - Diseño con alta disponibilidad (mín. 2 réplicas de backend y de base de datos).
+
+4. **Escalabilidad**  
+   - Arquitectura capaz de escalar horizontalmente (stateless API + almacenamiento S3).  
+   - Soportar crecimiento de hasta **500,000 documentos** en el primer año.
+
+5. **Usabilidad**  
+   - Interfaz web responsiva, compatible con Chrome, Edge y Safari.  
+   - Navegación intuitiva: carga/descarga, aprobación con un máximo de 3 clics.
+
+6. **Mantenibilidad**  
+   - Código documentado y modularizado (tests unitarios ≥ 80 % cobertura).  
+   - CI/CD automatizado para despliegues y pruebas.
+
+7. **Cumplimiento y Auditoría**  
+   - Audit-trail inmutable de todas las acciones (create/read/update/delete).  
+   - Generación de reportes de auditoría en PDF.
+
+8. **Backup y Recuperación**  
+   - Backups diarios de base de datos y bucket de archivos, retención de 30 días.  
+   - Procedimiento documentado de restore en < 2 horas.
